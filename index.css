@@ -1,0 +1,130 @@
+* {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1c7a99;
+  overflow-x: hidden;
+}
+
+#keyboard {
+  width: 60vw;
+  height: 48vh;
+  position: relative;
+  top: 51vh;
+  left: 20%;
+}
+
+.key {
+  width: 60px;
+  height: 55px;
+  border: none;
+  margin: 3px;
+  float: left;
+  cursor: pointer;
+  position: relative;
+  left: 1%;
+  border-radius: 4px;
+  background: #69c6e6;
+  top: 10%;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px black;
+  box-shadow: 3px 3px black;
+  outline: none;
+  opacity: 100%;
+}
+
+.key-pressed {
+  background: black;
+  opacity: 50%;
+}
+
+#text {
+  position: absolute;
+  width: 99.9vw;
+  height: 50vh;
+  font-size: 2rem;
+  border-bottom: none;
+  background: none;
+  resize: none;
+  border-bottom: 2px solid black;
+  background-color: #2232;
+  outline: none;
+  caret-color: black;
+}
+
+#text::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+.keyboard-line {
+  width: 100vw;
+  float: left;
+  position: relative;
+}
+
+#second-line {
+  left: 2%;
+}
+
+#third-line {
+  left: 4%;
+}
+
+#last-line {
+  left: 6%;
+}
+
+#space-bar {
+  width: 25vw;
+  height: 45px;
+  position: absolute;
+  left: 13%;
+  top: 100%;
+  cursor: pointer;
+}
+
+#caps-light {
+  border-radius: 10px;
+  width: 10px;
+  height: 10px;
+  opacity: 50%;
+  border: 0.5px solid black;
+}
+
+.caps-light-off {
+  background: transparent;
+}
+
+.caps-light-on {
+  background: rgb(0, 255, 0);
+}
+
+img {
+  width: 50%;
+  position: relative;
+}
+
+.Backspace {
+  top: 15%;
+}
+
+.CapsLock {
+  top: 10%;
+}
+
+.Enter {
+  top: -10%;
+  width: 40%;
+}
+
+@media only screen and (max-width: 1000px) {
+  #keyboard {
+    left: 0%;
+  }
+}
