@@ -3,16 +3,15 @@ import { keys } from './keysObj.js';
 
 function clickEffect(evt) { // create the click effect in buttons
     const area = document.querySelector("textarea");
-    const target = getButton(evt); 
+    const target = getButton(evt);
     // special chars has imgs as childs, this function prevents a bug when clicking in the img and not in the button, changing
     // the entire background
-    target.style.background = "black";
-    target.style.opacity = "50%";
+    target.classList.add("key-pressed")
     setTimeout(() => {
-        target.style.background = "#69c6e6";
-        target.style.opacity = "100%";
+        target.classList.remove("key-pressed")
     }, 200);
     editTextArea(target, area);
+    area.focus();
 }
 
 function getButton(evt) {
